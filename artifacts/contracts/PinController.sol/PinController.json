@@ -1,0 +1,186 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "deviceId",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "DeviceOwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "deviceId",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint8",
+                "name": "pin",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "internalType": "enum PinController.PinStatus",
+                "name": "status",
+                "type": "uint8"
+            }
+        ],
+        "name": "DevicePinStatusChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "deviceId",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            }
+        ],
+        "name": "DeviceRegistered",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "registerDevice",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "deviceId",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_deviceId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "_pin",
+                "type": "uint8"
+            },
+            {
+                "internalType": "enum PinController.PinStatus",
+                "name": "_pinStatus",
+                "type": "uint8"
+            }
+        ],
+        "name": "setDevicePinStatus",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_deviceId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferDeviceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "currentDeviceId",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "devices",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_deviceId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "_pin",
+                "type": "uint8"
+            }
+        ],
+        "name": "getDevicePinStatus",
+        "outputs": [
+            {
+                "internalType": "enum PinController.PinStatus",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

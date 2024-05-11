@@ -1,0 +1,22 @@
+{
+  "name": "hardhat-boilerplate-minimal",
+  "version": "1.0.1",
+  "description": "Minimal hardhat boilerplate for Dapp development",
+  "private": true,
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat deploy"
+  },
+  "keywords": [],
+  "author": "Salman Dabbakuti",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.20.1"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
